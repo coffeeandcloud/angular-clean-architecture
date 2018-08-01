@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ElephantRepositoryWebRepository extends ElephantRepository {
+export class ElephantWebRepository extends ElephantRepository {
 
   constructor() {
     super();
