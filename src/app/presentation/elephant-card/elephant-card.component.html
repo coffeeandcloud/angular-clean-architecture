@@ -1,3 +1,5 @@
-<p>
-  {{elephantName}}
-</p>
+<ul>
+  <li *ngFor="let elephant of elephants">
+    {{elephant.name}} ({{elephant.family}})
+  </li>
+</ul>

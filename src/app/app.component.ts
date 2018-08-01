@@ -10,25 +10,11 @@ import { ElephantModel } from './core/domain/elephant.model';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  title: String = '';
-
-  sub: Subscription;
-
-  constructor(private getElephantByName: GetElephantByNameUsecase) {
-    console.log(getElephantByName);
-  }
+  constructor() {}
 
   ngOnDestroy(): void {
-    if (this.sub) { this.sub.unsubscribe(); }
   }
 
   ngOnInit(): void {
-    /*
-    this.sub = this.getElephantByName.execute('Bla').subscribe((value: ElephantModel) => {
-      this.title = value.name;
-    }, () => {
-      console.warn('Error fetching elephants.');
-    });
-    */
   }
 }

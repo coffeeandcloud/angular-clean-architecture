@@ -11,13 +11,16 @@ export class ElephantCardComponent implements OnInit {
 
   elephantName: String = '';
 
+  elephants: Array<ElephantModel>;
+
   constructor(private getElephantByName: GetElephantByNameUsecase) {
     console.log(getElephantByName);
   }
 
   ngOnInit() {
+    this.elephants = [];
     this.getElephantByName.execute('Bla').subscribe((value: ElephantModel) => {
-      this.elephantName = value.name;
+      this.elephants.push(value);
     });
   }
 
