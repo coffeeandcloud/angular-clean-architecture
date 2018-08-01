@@ -5,11 +5,6 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule
   ],
-  declarations: [
-
-  ],
-  exports: [
-
-  ]
+  declarations: []
 })
-export class CoreModule { }
+export class PresentationModule { }

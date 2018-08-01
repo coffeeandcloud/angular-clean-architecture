@@ -4,9 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DataModule } from './data/data.module';
 import { CoreModule } from './core/core.module';
-import { WebWedgeRepository } from './data/repository/web-wedge.repository';
-import { GetWedgeByIdUsecase } from './core/usecases/get-wedge-by-id.usecase';
-import { WedgeRepository } from './core/repositories/wedge-repository';
+import { ElephantRepository } from './core/repositories/elephant.repository';
+import { ElephantMockRepository } from './data/repository/elephant-mock.repository';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { WedgeRepository } from './core/repositories/wedge-repository';
     CoreModule
   ],
   providers: [
-    {provide: WedgeRepository, useClass: WebWedgeRepository},
-    GetWedgeByIdUsecase
+    {provide: ElephantRepository, useClass: ElephantMockRepository}
   ],
   bootstrap: [AppComponent]
 })
