@@ -16,11 +16,15 @@ export class ElephantWebRepository extends ElephantRepository {
     return undefined;
   }
 
-  getElephantByName(name: String): Observable<ElephantModel> {
+  getElephantByName(name: string): Observable<ElephantModel> {
     return undefined;
   }
 
   saveElephant(elephant: ElephantModel): Observable<ElephantModel> {
+    return undefined;
+  }
+
+  getAllElephants(): Observable<ElephantModel> {
     return undefined;
   }
 }

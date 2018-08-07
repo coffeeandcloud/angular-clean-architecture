@@ -4,10 +4,10 @@ import { ElephantModel } from '../../core/domain/elephant.model';
 
 @Component({
   selector: 'app-elephant-card',
-  templateUrl: './elephant-card.component.html',
-  styleUrls: ['./elephant-card.component.scss']
+  templateUrl: './elephant-card-list.component.html',
+  styleUrls: ['./elephant-card-list.component.scss']
 })
-export class ElephantCardComponent implements OnInit {
+export class ElephantCardListComponent implements OnInit {
 
   elephantName: String = '';
 

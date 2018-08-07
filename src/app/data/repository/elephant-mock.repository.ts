@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ElephantRepository } from '../../core/repositories/elephant.repository';
 import { ElephantModel } from '../../core/domain/elephant.model';
 import { Observable, of, pipe, from } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +25,17 @@ export class ElephantMockRepository extends ElephantRepository {
     return of(this.elephant);
   }
 
-  getElephantByName(name: String): Observable<ElephantModel> {
-    return from(this.elephants);
+  getElephantByName(name: string): Observable<ElephantModel> {
+    return of(this.elephant).pipe(filter( (elephant: ElephantModel) => {
+      return (elephant.name.indexOf(name) !== -1);
+    }));
   }
 
   saveElephant(elephant: ElephantModel): Observable<ElephantModel> {
     return of(this.elephant);
+  }
+
+  getAllElephants(): Observable<ElephantModel> {
+    return from(this.elephants);
   }
 }

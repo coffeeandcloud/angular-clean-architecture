@@ -1,4 +1,4 @@
 export interface ElephantModel {
-  name: String;
-  family: String;
+  name: string;
+  family: string;
 }
