@@ -12,7 +12,7 @@ export class ElephantWebRepository extends ElephantRepository {
     super();
   }
 
-  deleteElephant(elephant: ElephantModel): Observable<ElephantModel> {
+  deleteElephant(elephant: ElephantModel) {
     return undefined;
   }
 

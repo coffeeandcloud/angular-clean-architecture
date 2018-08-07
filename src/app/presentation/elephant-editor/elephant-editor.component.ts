@@ -11,19 +11,19 @@ export class ElephantEditorComponent {
 
   newElephant: ElephantModel = {
     name: '',
-    family: ''
+    family: 'baby'
   };
 
   @Output()
-  onElephantSaved: EventEmitter<void> = new EventEmitter();
+  elephantSaved: EventEmitter<void> = new EventEmitter();
 
   constructor(private saveElephant: SaveElephantUsecase) {
   }
 
   onAddElephantClicked() {
     this.saveElephant.execute(this.newElephant).subscribe(() => {
-      console.log('Done saving elephant with values: ' + JSON.stringify(this.newElephant));
-      this.onElephantSaved.next();
+      this.newElephant = {name: '', family: ''};
+      this.elephantSaved.next();
     }, () => {
 
     });

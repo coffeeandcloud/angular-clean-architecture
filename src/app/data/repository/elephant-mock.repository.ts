@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ElephantRepository } from '../../core/repositories/elephant.repository';
 import { ElephantModel } from '../../core/domain/elephant.model';
-import { Observable, of, pipe, from } from 'rxjs';
+import { from, Observable, of } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Injectable({
@@ -11,17 +11,13 @@ export class ElephantMockRepository extends ElephantRepository {
 
   elephant: ElephantModel = {name: 'Little Elephant', family: 'Baby'};
 
-  elephants: Array<ElephantModel> = [
-    {name: 'Little Elephant', family: 'Baby'},
-    {name: 'Mr. Big', family: 'Grownup'},
-    {name: 'Big Mama', family: 'Grownup'}
-  ];
+  elephants: Array<ElephantModel> = [];
 
   constructor() {
     super();
   }
 
-  deleteElephant(elephant: ElephantModel): Observable<ElephantModel> {
+  deleteElephant(elephant: ElephantModel) {
     return of(this.elephant);
   }
 
@@ -32,6 +28,8 @@ export class ElephantMockRepository extends ElephantRepository {
   }
 
   saveElephant(elephant: ElephantModel): Observable<ElephantModel> {
+    this.elephants.push(elephant);
+    console.log(this.elephants);
     return of(this.elephant);
   }
 

@@ -14,5 +14,4 @@ export class GetAllElephantsUsecase implements UseCase<void, ElephantModel> {
   execute(params: void): Observable<ElephantModel> {
     return this.elephantRepository.getAllElephants();
   }
-
 }

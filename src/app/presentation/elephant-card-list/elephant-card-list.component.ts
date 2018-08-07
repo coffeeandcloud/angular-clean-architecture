@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GetElephantByNameUsecase } from '../../core/usecases/get-elephant-by-name.usecase';
 import { ElephantModel } from '../../core/domain/elephant.model';
+import { GetAllElephantsUsecase } from '../../core/usecases/get-all-elephants.usecase';
 
 @Component({
   selector: 'app-elephant-card',
@@ -9,19 +9,20 @@ import { ElephantModel } from '../../core/domain/elephant.model';
 })
 export class ElephantCardListComponent implements OnInit {
 
-  elephantName: String = '';
-
   elephants: Array<ElephantModel>;
 
-  constructor(private getElephantByName: GetElephantByNameUsecase) {
-    console.log(getElephantByName);
+  constructor(private getAllElephants: GetAllElephantsUsecase) {
+
   }
 
   ngOnInit() {
+
+  }
+
+  updateElephants() {
     this.elephants = [];
-    this.getElephantByName.execute('Bla').subscribe((value: ElephantModel) => {
+    this.getAllElephants.execute(null).subscribe((value: ElephantModel) => {
       this.elephants.push(value);
     });
   }
-
 }
