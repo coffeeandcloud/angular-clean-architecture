@@ -6,21 +6,25 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ElephantRepositoryWebRepository extends ElephantRepository {
+export class ElephantWebRepository extends ElephantRepository {
 
   constructor() {
     super();
   }
 
-  deleteElephant(elephant: ElephantModel): Observable<ElephantModel> {
+  deleteElephant(elephant: ElephantModel) {
     return undefined;
   }
 
-  getElephantByName(name: String): Observable<ElephantModel> {
+  getElephantByName(name: string): Observable<ElephantModel> {
     return undefined;
   }
 
   saveElephant(elephant: ElephantModel): Observable<ElephantModel> {
+    return undefined;
+  }
+
+  getAllElephants(): Observable<ElephantModel> {
     return undefined;
   }
 }

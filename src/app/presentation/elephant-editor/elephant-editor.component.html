@@ -1,0 +1,10 @@
+<div>
+  Elephant Name: <input type="text" (keyup)="onElephantNameChanged($event)">
+  <select (change)="onTypeChanged($event)">
+    <option value="grownup">Grownup</option>
+    <option value="baby" selected>Baby</option>
+    <option value="father">Father</option>
+    <option value="mother">Mother</option>
+  </select>
+  <button (click)="onAddElephantClicked()">Add</button>
+</div>
