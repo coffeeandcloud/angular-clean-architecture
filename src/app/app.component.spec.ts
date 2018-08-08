@@ -1,15 +1,20 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { WedgeRepository } from './core/repositories/wedge-repository';
-import { WebWedgeRepository } from './data/repository/web-wedge.repository';
+import { ElephantRepository } from './core/repositories/elephant.repository';
+import { ElephantMockRepository } from './data/repository/elephant-mock.repository';
+import { ElephantEditorComponent } from './presentation/elephant-editor/elephant-editor.component';
+import { ElephantCardListComponent } from './presentation/elephant-card-list/elephant-card-list.component';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        ElephantEditorComponent,
+        ElephantCardListComponent
       ],
       providers: [
-        {provide: WedgeRepository, useClass: WebWedgeRepository}
+        {provide: ElephantRepository, useClass: ElephantMockRepository}
       ]
     }).compileComponents();
   }));
