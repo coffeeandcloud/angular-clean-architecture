@@ -5,7 +5,7 @@ import { GetAllElephantsUsecase } from '../../core/usecases/get-all-elephants.us
 @Component({
   selector: 'app-elephant-card',
   templateUrl: './elephant-card-list.component.html',
-  styleUrls: ['./elephant-card-list.component.scss']
+  styleUrls: []
 })
 export class ElephantCardListComponent implements OnInit {
 

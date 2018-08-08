@@ -5,7 +5,7 @@ import { SaveElephantUsecase } from '../../core/usecases/save-elephant.usecase';
 @Component({
   selector: 'app-elephant-editor',
   templateUrl: './elephant-editor.component.html',
-  styleUrls: ['./elephant-editor.component.scss']
+  styleUrls: []
 })
 export class ElephantEditorComponent {
 
