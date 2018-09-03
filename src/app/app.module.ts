@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { DataModule } from './data/data.module';
 import { CoreModule } from './core/core.module';
 import { ElephantRepository } from './core/repositories/elephant.repository';
-import { ElephantMockRepository } from './data/repository/elephant-mock.repository';
 import { ElephantWebRepository } from './data/repository/elephant-web.repository';
 import { PresentationModule } from './presentation/presentation.module';
 
@@ -19,7 +18,7 @@ import { PresentationModule } from './presentation/presentation.module';
     PresentationModule
   ],
   providers: [
-    {provide: ElephantRepository, useClass: ElephantMockRepository}
+    {provide: ElephantRepository, useClass: ElephantWebRepository}
   ],
   bootstrap: [AppComponent]
 })

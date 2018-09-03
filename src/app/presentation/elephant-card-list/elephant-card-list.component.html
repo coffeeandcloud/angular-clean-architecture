@@ -1,5 +1,6 @@
+<button class="button-outline" (click)="updateElephants()">Load Elephant Birthday Calendar</button>
 <ul class="row">
   <li *ngFor="let elephant of elephants">
-    {{elephant.name}} ({{elephant.family}})
+    Name: {{elephant.name}} Family Member: {{elephant.family}} Birthday: {{elephant.birthday | date:'mediumDate'}}
   </li>
 </ul>

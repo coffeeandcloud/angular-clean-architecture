@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ElephantModel } from '../../core/domain/elephant.model';
 import { GetAllElephantsUsecase } from '../../core/usecases/get-all-elephants.usecase';
 
@@ -7,15 +7,11 @@ import { GetAllElephantsUsecase } from '../../core/usecases/get-all-elephants.us
   templateUrl: './elephant-card-list.component.html',
   styleUrls: []
 })
-export class ElephantCardListComponent implements OnInit {
+export class ElephantCardListComponent {
 
   elephants: Array<ElephantModel>;
 
   constructor(private getAllElephants: GetAllElephantsUsecase) {
-
-  }
-
-  ngOnInit() {
 
   }
 

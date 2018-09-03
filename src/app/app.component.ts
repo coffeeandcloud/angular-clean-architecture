@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { ElephantCardListComponent } from './presentation/elephant-card-list/elephant-card-list.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,4 @@ import { ElephantCardListComponent } from './presentation/elephant-card-list/ele
 })
 export class AppComponent {
 
-  @ViewChild(ElephantCardListComponent)
-  private elephantCardListComponent: ElephantCardListComponent;
-
-  onElephantSaved(): void {
-    this.elephantCardListComponent.updateElephants();
-  }
 }
