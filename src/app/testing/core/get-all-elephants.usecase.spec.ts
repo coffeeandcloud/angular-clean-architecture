@@ -2,7 +2,7 @@ import { inject, TestBed } from '@angular/core/testing';
 
 import { GetAllElephantsUsecase } from '../../core/usecases/get-all-elephants.usecase';
 import { ElephantRepository } from '../../core/repositories/elephant.repository';
-import { ElephantMockRepository } from '../../data/repository/elephant-mock.repository';
+import { ElephantMockRepository } from '../../data/repository/elephant-mock-repository/elephant-mock.repository';
 
 describe('GetAllElephantsUsecase', () => {
   beforeEach(() => {

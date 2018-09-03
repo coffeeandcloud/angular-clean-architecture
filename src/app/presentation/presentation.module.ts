@@ -4,7 +4,7 @@ import { ElephantCardListComponent } from './elephant-card-list/elephant-card-li
 import { CoreModule } from '../core/core.module';
 import { DataModule } from '../data/data.module';
 import { ElephantRepository } from '../core/repositories/elephant.repository';
-import { ElephantWebRepository } from '../data/repository/elephant-web.repository';
+import { ElephantWebRepository } from '../data/repository/elephant-web-repository/elephant-web.repository';
 
 @NgModule({
   imports: [

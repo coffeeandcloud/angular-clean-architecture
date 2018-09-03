@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { DataModule } from './data/data.module';
 import { CoreModule } from './core/core.module';
 import { ElephantRepository } from './core/repositories/elephant.repository';
-import { ElephantWebRepository } from './data/repository/elephant-web.repository';
+import { ElephantWebRepository } from './data/repository/elephant-web-repository/elephant-web.repository';
 import { PresentationModule } from './presentation/presentation.module';
 
 @NgModule({

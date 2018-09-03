@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ElephantRepository } from '../../core/repositories/elephant.repository';
-import { ElephantModel } from '../../core/domain/elephant.model';
+import { ElephantRepository } from '../../../core/repositories/elephant.repository';
+import { ElephantModel } from '../../../core/domain/elephant.model';
 import { from, Observable, of } from 'rxjs';
 import { filter } from 'rxjs/operators';
 

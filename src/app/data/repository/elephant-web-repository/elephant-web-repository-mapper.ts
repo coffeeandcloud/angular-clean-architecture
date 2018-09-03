@@ -1,6 +1,6 @@
 import { ElephantWebEntity } from './elephant-web-entity';
-import { ElephantModel } from '../../core/domain/elephant.model';
-import { Mapper } from '../../core/base/mapper';
+import { ElephantModel } from '../../../core/domain/elephant.model';
+import { Mapper } from '../../../core/base/mapper';
 
 export class ElephantWebRepositoryMapper extends Mapper <ElephantWebEntity, ElephantModel> {
   mapFrom(param: ElephantWebEntity): ElephantModel {

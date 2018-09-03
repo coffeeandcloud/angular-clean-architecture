@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ElephantRepository } from '../../core/repositories/elephant.repository';
-import { ElephantModel } from '../../core/domain/elephant.model';
+import { ElephantRepository } from '../../../core/repositories/elephant.repository';
+import { ElephantModel } from '../../../core/domain/elephant.model';
 import { Observable } from 'rxjs';
 import { ElephantWebRepositoryMapper } from './elephant-web-repository-mapper';
 import { HttpClient } from '@angular/common/http';
