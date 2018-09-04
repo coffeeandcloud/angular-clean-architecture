@@ -21,4 +21,8 @@ export class ElephantCardListComponent {
       this.elephants.push(value);
     });
   }
+
+  onSelect(event) {
+    console.log(event.target);
+  }
 }

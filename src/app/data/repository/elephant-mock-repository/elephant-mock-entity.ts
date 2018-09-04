@@ -1,4 +1,4 @@
-export interface ElephantWebEntity {
+export interface ElephantMockEntity {
   id: number;
   name: string;
   family: string;
