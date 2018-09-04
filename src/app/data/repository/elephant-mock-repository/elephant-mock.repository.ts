@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ElephantRepository } from '../../core/repositories/elephant.repository';
-import { ElephantModel } from '../../core/domain/elephant.model';
+import { ElephantRepository } from '../../../core/repositories/elephant.repository';
+import { ElephantModel } from '../../../core/domain/elephant.model';
 import { from, Observable, of } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
@@ -9,7 +9,7 @@ import { filter } from 'rxjs/operators';
 })
 export class ElephantMockRepository extends ElephantRepository {
 
-  elephant: ElephantModel = {name: 'Little Elephant', family: 'Baby'};
+  elephant: ElephantModel = {name: 'Little Elephant', family: 'Baby', birthday: new Date()};
 
   elephants: Array<ElephantModel> = [];
 
@@ -17,20 +17,10 @@ export class ElephantMockRepository extends ElephantRepository {
     super();
   }
 
-  deleteElephant(elephant: ElephantModel) {
-    return of(this.elephant);
-  }
-
   getElephantByName(name: string): Observable<ElephantModel> {
     return of(this.elephant).pipe(filter( (elephant: ElephantModel) => {
       return (elephant.name.indexOf(name) !== -1);
     }));
-  }
-
-  saveElephant(elephant: ElephantModel): Observable<ElephantModel> {
-    this.elephants.push(elephant);
-    console.log(this.elephants);
-    return of(this.elephant);
   }
 
   getAllElephants(): Observable<ElephantModel> {

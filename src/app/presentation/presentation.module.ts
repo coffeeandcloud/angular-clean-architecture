@@ -4,8 +4,7 @@ import { ElephantCardListComponent } from './elephant-card-list/elephant-card-li
 import { CoreModule } from '../core/core.module';
 import { DataModule } from '../data/data.module';
 import { ElephantRepository } from '../core/repositories/elephant.repository';
-import { ElephantMockRepository } from '../data/repository/elephant-mock.repository';
-import { ElephantEditorComponent } from './elephant-editor/elephant-editor.component';
+import { ElephantWebRepository } from '../data/repository/elephant-web-repository/elephant-web.repository';
 
 @NgModule({
   imports: [
@@ -14,15 +13,13 @@ import { ElephantEditorComponent } from './elephant-editor/elephant-editor.compo
     DataModule
   ],
   declarations: [
-    ElephantCardListComponent,
-    ElephantEditorComponent
+    ElephantCardListComponent
   ],
   exports: [
-    ElephantCardListComponent,
-    ElephantEditorComponent
+    ElephantCardListComponent
   ],
   providers: [
-    {provide: ElephantRepository, useClass: ElephantMockRepository}
+    {provide: ElephantRepository, useClass: ElephantWebRepository}
   ]
 })
 export class PresentationModule { }
