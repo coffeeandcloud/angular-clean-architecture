@@ -14,7 +14,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let elephant of elephants">
+      <tr *ngFor="let elephant of elephants" (click)="onSelect($event)">
         <td>{{elephant.name}}</td>
         <td>{{elephant.family}}</td>
         <td>{{elephant.birthday | date:'mediumDate'}}</td>

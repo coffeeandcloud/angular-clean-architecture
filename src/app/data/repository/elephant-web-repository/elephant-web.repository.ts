@@ -20,8 +20,10 @@ export class ElephantWebRepository extends ElephantRepository {
     super();
   }
 
-  getElephantByName(name: string): Observable<ElephantModel> {
-    return undefined;
+  getElephantById(id: number): Observable<ElephantModel> {
+    return this.http
+      .get<ElephantWebEntity>('http://5b8d40db7366ab0014a29bfa.mockapi.io/api/v1/elephants/${id}')
+      .pipe(map(this.mapper.mapFrom));
   }
 
   getAllElephants(): Observable<ElephantModel> {
