@@ -1,6 +1,26 @@
-<button class="button-outline" (click)="updateElephants()">Load Elephant Birthday Calendar</button>
-<ul class="row">
-  <li *ngFor="let elephant of elephants">
-    Name: {{elephant.name}} Family Member: {{elephant.family}} Birthday: {{elephant.birthday | date:'mediumDate'}}
-  </li>
-</ul>
+<div class="row">
+  <div class="column-center">
+    <button class="button-outline" (click)="updateElephants()">Load Elephant Birthday Calendar</button>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Family</th>
+        <th>Birthday</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let elephant of elephants">
+        <td>{{elephant.name}}</td>
+        <td>{{elephant.family}}</td>
+        <td>{{elephant.birthday | date:'mediumDate'}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
