@@ -13,7 +13,7 @@ export class ElephantMockRepository extends ElephantRepository {
 
   private mapper = new ElephantMockRepositoryMapper();
 
-  elephants: Array<ElephantMockEntity[]> = [
+  elephants = [
     {
       'id': 1,
       'name': 'Mr. MockBig',
