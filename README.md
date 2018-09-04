@@ -1,6 +1,6 @@
 # Angular Clean Architecture Approach
 
-[![CircleCI](https://circleci.com/gh/im-a-giraffe/angular-clean-architecture/tree/master.svg?style=svg)](https://circleci.com/gh/im-a-giraffe/angular-clean-architecture/tree/master)
+[![CircleCI](https://circleci.com/gh/im-a-giraffe/angular-clean-architecture.svg?style=svg&circle-token=2055f1b77256f228cd20e15f3c7b268e93d087c1)](https://circleci.com/gh/im-a-giraffe/angular-clean-architecture)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
